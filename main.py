@@ -16,7 +16,7 @@ for docx in d_docx:
 chdir('../pdf')
 d_pdf = listdir()
 for pdf in d_pdf:
-    n=0
+    n=1
     for pic in convert_from_path(pdf,DPI,fmt='png',poppler_path=PATH):
         filename = '../img/' + pdf[0:-4:1] + '({}).png'.format(n)
         pic.save(filename, 'png')
